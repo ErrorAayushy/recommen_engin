@@ -1,0 +1,8 @@
+imdb/
+venv/
+*.tsv.gz
+*.zip
+*.rar
+*.7z
+*.cache
+__pycache__/
