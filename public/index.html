@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What to Watch? - AI Movie Recommendations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!--   FULL SCREEN LOADING OVERLAY (NEW)          -->
+  <!-- ============================================ -->
+  <div id="loading-screen" style="
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 20px;
+      z-index: 9999;
+  ">
+      <div style="
+        width: 40px; height: 40px;
+        border: 4px solid #444;
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 15px;
+      "></div>
+      <span id="loading-text">Movies are loading...</span>
+  </div>
+
+  <style>
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- ============================================ -->
+  <!--   MAIN UI CONTENT                            -->
+  <!-- ============================================ -->
+
+  <header>
+    <h1>🎬 What to Watch?</h1>
+    <p>AI-Powered Movie Recommendation Platform</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h2>Find a Movie 🎥</h2>
+      <input type="text" id="searchInput" placeholder="Search by title (e.g., Matrix, Inception)...">
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section class="recommend-section">
+      <h2>🔥 Get Filtered Recommendations</h2>
+      <select id="genreSelect">
+        <option value="">-- Select a Genre --</option>
+      </select>
+      <select id="regionSelect">
+        <option value="">-- Select a Region --</option>
+      </select>
+      <select id="languageSelect">
+        <option value="">-- Select a Language --</option>
+      </select>
+      <button id="recommendBtn">Recommend</button>
+    </section>
+
+    <section class="personal-section">
+      <h2><span id="personalTitle">🌟 Recommended For You</span></h2>
+      <div id="personalList" class="movie-list">
+        <p class="status-message">Loading your personal recommendations...</p>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <h2><span id="resultsTitle">🎞 Results</span></h2>
+      <div id="movieList" class="movie-list">
+        <p class="status-message" id="statusMessage">Loading movies from server... This may take a moment.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 What to Watch? | AI Movie Recommender</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

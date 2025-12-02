@@ -1,0 +1,210 @@
+/* --- Global Styles: Bright Theme --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* New bright background */
+  background: #f4f8ff; 
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header & Title --- */
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  /* Clean white background */
+  background: #ffffff;
+  /* Softer, minimal shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e0e6f1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* New bright accent color */
+  color: #007bff;
+  /* New "popup" effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 300;
+}
+
+/* --- Main Content & Sections --- */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+section {
+  /* Clean white background for all sections */
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  /* Consistent minimal shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e0e6f1;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Forms (Inputs, Selects, Buttons) --- */
+input[type="text"],
+select {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  /* Light background to match body */
+  background: #f4f8ff;
+  color: #333;
+  border: 1px solid #dde6f1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Custom dropdown arrow (now blue) */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%2Dxmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200%2D13%2D5.4H18.4c%2D5%200%2D9.3%201.8%2D13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20128c3.6%203.6%207.8%205.4%2013%205.4s9.4%2D1.8%2013%2D5.4L287%2095c3.6%2D3.6%205.4%2D7.8%205.4%2D13%200%2D5%2D1.8%2D9.2%2D5.4%2D12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65em auto;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  /* New bright button color */
+  background: #007bff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  /* Darker shade on hover */
+  background: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* --- Movie List & Cards --- */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card {
+  /* White card background */
+  background: #ffffff;
+  border-radius: 12px;
+  /* Consistent minimal shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.movie-card h3 {
+  /* Title uses accent color */
+  color: #007bff;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-card p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.movie-meta {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.movie-rating {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.movie-rating .stars {
+  font-weight: 600;
+  /* Keep stars yellow, it's universal */
+  color: #fdc500;
+}
+
+.movie-rating .votes {
+  color: #6c757d;
+}
+
+.status-message {
+  width: 100%;
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6c757d;
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  /* Transparent background, sits on body color */
+  background: transparent;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
